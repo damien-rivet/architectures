@@ -1,0 +1,39 @@
+name: "Epic"
+description: Create an issue for a new Epic.
+title: "[EPIC] [<language>] <title>"
+labels: [
+  "Epic"
+]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: "Summary"
+      description: Write a short section about the Epic and what it will bring to the repository once it is done.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: Write a short section about the context around the Epic by including everything that is relevant to its creation.
+    validations:
+      required: true
+  - type: textarea
+    id: overview
+    attributes:
+      label: "Technical overview"
+      description: Write a lengthy section containing all the technical information about the Epic, no need to go into implementation details or code.
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: "Language"
+      description: What is the language that will used to develop this Epic?
+      multiple: false
+      options:
+        - Swift
+        - Objective-C
+    validations:
+      required: true
