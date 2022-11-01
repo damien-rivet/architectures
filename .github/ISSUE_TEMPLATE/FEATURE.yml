@@ -1,0 +1,47 @@
+name: "Feature"
+description: Create an issue for a new Feature.
+title: "[<>] - <title>"
+labels: [
+  "Feature"
+]
+body:
+  - type: input
+    id: epic
+    attributes:
+      label: "Epic"
+      description: Write the ID of the Epic that will contain this issue.
+      placeholder: "12345"
+    validations:
+      required: true
+  - type: input
+    id: summary
+    attributes:
+      label: "Summary"
+      description: Write a short section about the Feature.
+    validations:
+      required: true
+  - type: textarea
+    id: expectations
+    attributes:
+      label: "Expectations"
+      description: Write a short section containing the expected results from the Feature.
+    validations:
+      required: true
+  - type: textarea
+    id: implementation
+    attributes:
+      label: "Implementation"
+      description: Write a lengthy section containing all the technical information about the Feature, includes as much details as you can provide.
+    validations:
+      required: false
+  - type: dropdown
+    id: language
+    attributes:
+      label: "Language"
+      description: What is the language that will used to develop this Feature?
+      multiple: false
+      options:
+        - Swift
+        - Objective-C
+    validations:
+      required: true
