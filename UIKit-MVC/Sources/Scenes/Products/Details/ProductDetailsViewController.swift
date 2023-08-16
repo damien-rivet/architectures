@@ -17,19 +17,38 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class ProductDetailsViewController: UIViewController {
 
     // MARK: - Properties
 
-    var window: UIWindow?
+    private let product: Product
+
+    init(product: Product) {
+        self.product = product
+
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - Functions
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = TabBarController()
-        window?.makeKeyAndVisible()
+        setupViews()
+        setupLayout()
+    }
+
+    func setupViews() {
+        view.backgroundColor = .systemGroupedBackground
+
+        title = product.name
+    }
+
+    func setupLayout() {
+
     }
 }

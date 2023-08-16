@@ -13,23 +13,15 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see https://www.gnu.org/licenses.
-//  
+//
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class CartViewController: UIViewController {
 
-    // MARK: - Properties
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-    var window: UIWindow?
-
-    // MARK: - Functions
-
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = TabBarController()
-        window?.makeKeyAndVisible()
+        view.backgroundColor = .green
     }
 }

@@ -15,21 +15,11 @@
 // along with this program.  If not, see https://www.gnu.org/licenses.
 //  
 
-import UIKit
+import Foundation
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+public struct Product {
 
-    // MARK: - Properties
-
-    var window: UIWindow?
-
-    // MARK: - Functions
-
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = TabBarController()
-        window?.makeKeyAndVisible()
-    }
+    public let name: String
+    public let price: Double
+    public let shortDescription: String
 }

@@ -17,10 +17,11 @@
 
 import UIKit
 
-class DummyViewController: UIViewController {
+final class OrdersViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .red
+        view.backgroundColor = .blue
     }
 }

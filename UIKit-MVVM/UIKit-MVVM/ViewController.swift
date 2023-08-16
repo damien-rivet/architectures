@@ -17,19 +17,13 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class ViewController: UIViewController {
 
-    // MARK: - Properties
-
-    var window: UIWindow?
-
-    // MARK: - Functions
-
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = TabBarController()
-        window?.makeKeyAndVisible()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
+
+
 }
+
