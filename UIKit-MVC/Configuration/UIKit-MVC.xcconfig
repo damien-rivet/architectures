@@ -18,7 +18,7 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-#include "../Common/Common.xcconfig"
+#include "../Configuration/Common.xcconfig"
 
 // Packaging
 PRODUCT_BUNDLE_IDENTIFIER = com.github.damien-rivet.UIKit-MVC

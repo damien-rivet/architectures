@@ -16,14 +16,15 @@
 //  
 
 import UIKit
+import Entities
 
 final class ProductsViewController: UIViewController {
 
     // MARK: - Constants
 
     private let products = [
-        Product(name: "Saucisse x5", price: 6, shortDescription: "Un petit pack de 5 saucisses."),
-        Product(name: "Salade", price: 5, shortDescription: "Une salade, c'est très bon pour la santé.")
+        Product(identifier: UUID(), name: "Product 1", shortDescription: "The first product", fullDescription: "This is the first product."),
+        Product(identifier: UUID(), name: "Product 2", shortDescription: "The second product", fullDescription: "This is the second product."),
     ]
 
     // MARK: - Properties

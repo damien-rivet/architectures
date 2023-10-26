@@ -13,13 +13,9 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see https://www.gnu.org/licenses.
-//  
+//
 
-import Foundation
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
 
-public struct Product {
-
-    public let name: String
-    public let price: Double
-    public let shortDescription: String
-}
+#include "../Configuration/Common.xcconfig"

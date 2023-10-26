@@ -16,6 +16,7 @@
 //  
 
 import UIKit
+import Entities
 
 final class ProductTableViewCell: UITableViewCell {
 

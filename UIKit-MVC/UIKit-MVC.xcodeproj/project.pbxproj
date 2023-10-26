@@ -17,7 +17,6 @@
 		ED1CDC852A86304900863A5A /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDC842A86304900863A5A /* ProductDetailsViewController.swift */; };
 		EDA13AF22AEA2E0100E1EDC0 /* libEntities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA13AF12AEA2E0100E1EDC0 /* libEntities.a */; };
 		EDB95D852A8CF2DE0018EE65 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB95D842A8CF2DE0018EE65 /* OrdersViewController.swift */; };
-		EDB95D882A8CF5D30018EE65 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB95D872A8CF5D30018EE65 /* Product.swift */; };
 		EDB95D8A2A8CF7FF0018EE65 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB95D892A8CF7FF0018EE65 /* ProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		EDA13AF12AEA2E0100E1EDC0 /* libEntities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libEntities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA13AF42AEA2F1500E1EDC0 /* UIKit-MVC.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "UIKit-MVC.xcconfig"; sourceTree = "<group>"; };
 		EDB95D842A8CF2DE0018EE65 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
-		EDB95D872A8CF5D30018EE65 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		EDB95D892A8CF7FF0018EE65 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +71,6 @@
 		ED1CDC2E2A83C8BF00863A5A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EDB95D862A8CF5C10018EE65 /* Models */,
 				ED1CDC2F2A83C8BF00863A5A /* AppDelegate.swift */,
 				ED1CDC562A83D02400863A5A /* SceneDelegate.swift */,
 				ED1CDC782A83D19800863A5A /* Scenes */,
@@ -152,14 +149,6 @@
 			path = Orders;
 			sourceTree = "<group>";
 		};
-		EDB95D862A8CF5C10018EE65 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				EDB95D872A8CF5D30018EE65 /* Product.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,7 +221,6 @@
 			files = (
 				ED1CDC812A86303000863A5A /* CartViewController.swift in Sources */,
 				EDB95D8A2A8CF7FF0018EE65 /* ProductTableViewCell.swift in Sources */,
-				EDB95D882A8CF5D30018EE65 /* Product.swift in Sources */,
 				ED1CDC302A83C8BF00863A5A /* AppDelegate.swift in Sources */,
 				ED1CDC7C2A862FF000863A5A /* TabBarController.swift in Sources */,
 				EDB95D852A8CF2DE0018EE65 /* OrdersViewController.swift in Sources */,

@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		EDA13AE62AEA2D5700E1EDC0 /* libEntities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEntities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA13AE92AEA2D5700E1EDC0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		EDA13AF62AEA364E00E1EDC0 /* Entities.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Entities.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +42,7 @@
 		EDA13ADD2AEA2D5700E1EDC0 = {
 			isa = PBXGroup;
 			children = (
+				EDA13AF52AEA363C00E1EDC0 /* Configuration */,
 				EDA13AE82AEA2D5700E1EDC0 /* Entities */,
 				EDA13AE72AEA2D5700E1EDC0 /* Products */,
 			);
@@ -60,6 +62,14 @@
 				EDA13AE92AEA2D5700E1EDC0 /* Product.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		EDA13AF52AEA363C00E1EDC0 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EDA13AF62AEA364E00E1EDC0 /* Entities.xcconfig */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +139,7 @@
 /* Begin XCBuildConfiguration section */
 		EDA13AEB2AEA2D5700E1EDC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDA13AF62AEA364E00E1EDC0 /* Entities.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -179,7 +190,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -187,12 +197,12 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		EDA13AEC2AEA2D5700E1EDC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDA13AF62AEA364E00E1EDC0 /* Entities.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -237,13 +247,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -255,8 +263,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -267,8 +273,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
