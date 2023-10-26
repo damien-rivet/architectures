@@ -1,10 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>FILEHEADER</key>
-    <string>
-// Copyright (C) ___YEAR___ Damien Rivet
+//
+// Copyright (C) 2023 Damien Rivet
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -18,6 +13,25 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see https://www.gnu.org/licenses.
-//</string>
-</dict>
-</plist>
+//
+
+import Foundation
+
+public struct Product {
+
+    // MARK: - Constants
+
+    public let identifier: UUID
+    public let name: String
+    public let shortDescription: String
+    public let fullDescription: String
+
+    // MARK: - Initialisation
+
+    public init(identifier: UUID, name: String, shortDescription: String, fullDescription: String) {
+        self.identifier = identifier
+        self.name = name
+        self.shortDescription = shortDescription
+        self.fullDescription = fullDescription
+    }
+}

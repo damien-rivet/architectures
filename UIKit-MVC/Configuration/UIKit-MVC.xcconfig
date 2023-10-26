@@ -1,10 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>FILEHEADER</key>
-    <string>
-// Copyright (C) ___YEAR___ Damien Rivet
+//
+// Copyright (C) 2023 Damien Rivet
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -18,6 +13,17 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see https://www.gnu.org/licenses.
-//</string>
-</dict>
-</plist>
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "../Common/Common.xcconfig"
+
+// Packaging
+PRODUCT_BUNDLE_IDENTIFIER = com.github.damien-rivet.UIKit-MVC
+PRODUCT_NAME = UIKit MVC
+
+// Versioning
+CURRENT_PROJECT_VERSION = 1
+MARKETING_VERSION = 1.0.0
