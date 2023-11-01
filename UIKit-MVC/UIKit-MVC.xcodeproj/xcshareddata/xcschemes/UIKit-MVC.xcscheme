@@ -20,6 +20,20 @@
                ReferencedContainer = "container:UIKit-MVC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EDA13AE52AEA2D5700E1EDC0"
+               BuildableName = "libEntities.a"
+               BlueprintName = "Entities"
+               ReferencedContainer = "container:../Entities/Entities.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

@@ -15,7 +15,7 @@
 		ED1CDC812A86303000863A5A /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDC802A86303000863A5A /* CartViewController.swift */; };
 		ED1CDC832A86303C00863A5A /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDC822A86303C00863A5A /* ProductsViewController.swift */; };
 		ED1CDC852A86304900863A5A /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDC842A86304900863A5A /* ProductDetailsViewController.swift */; };
-		EDA13AF22AEA2E0100E1EDC0 /* libEntities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA13AF12AEA2E0100E1EDC0 /* libEntities.a */; };
+		ED6A1C7F2AF26F16002A6686 /* libEntities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6A1C7E2AF26F16002A6686 /* libEntities.a */; };
 		EDB95D852A8CF2DE0018EE65 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB95D842A8CF2DE0018EE65 /* OrdersViewController.swift */; };
 		EDB95D8A2A8CF7FF0018EE65 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB95D892A8CF7FF0018EE65 /* ProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +31,7 @@
 		ED1CDC802A86303000863A5A /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		ED1CDC822A86303C00863A5A /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		ED1CDC842A86304900863A5A /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		ED6A1C7E2AF26F16002A6686 /* libEntities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libEntities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA13AF12AEA2E0100E1EDC0 /* libEntities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libEntities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA13AF42AEA2F1500E1EDC0 /* UIKit-MVC.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "UIKit-MVC.xcconfig"; sourceTree = "<group>"; };
 		EDB95D842A8CF2DE0018EE65 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA13AF22AEA2E0100E1EDC0 /* libEntities.a in Frameworks */,
+				ED6A1C7F2AF26F16002A6686 /* libEntities.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +129,7 @@
 		EDA13AF02AEA2E0100E1EDC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED6A1C7E2AF26F16002A6686 /* libEntities.a */,
 				EDA13AF12AEA2E0100E1EDC0 /* libEntities.a */,
 			);
 			name = Frameworks;
@@ -277,7 +279,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -300,7 +301,6 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -339,7 +339,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -374,11 +373,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -394,11 +389,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
