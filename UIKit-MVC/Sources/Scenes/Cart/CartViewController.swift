@@ -16,12 +16,24 @@
 //
 
 import UIKit
+import Localization
 
 final class CartViewController: UIViewController {
+
+    // MARK: - Functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .green
+        setupViews()
+        setupLayout()
+    }
+
+    func setupViews() {
+        view.backgroundColor = .systemGroupedBackground
+    }
+
+    func setupLayout() {
+
     }
 }

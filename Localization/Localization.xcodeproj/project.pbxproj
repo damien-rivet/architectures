@@ -7,29 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EDA13AEA2AEA2D5700E1EDC0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA13AE92AEA2D5700E1EDC0 /* Product.swift */; };
+		ED6A1C972AF274CE002A6686 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ED6A1C962AF274CE002A6686 /* Localizable.xcstrings */; };
+		ED6A1CA02AF276BC002A6686 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A1C9F2AF276BC002A6686 /* LocalizedString.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		EDA13AE42AEA2D5700E1EDC0 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		EDA13AE62AEA2D5700E1EDC0 /* libEntities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEntities.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDA13AE92AEA2D5700E1EDC0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		EDA13AF62AEA364E00E1EDC0 /* Entities.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Entities.xcconfig; sourceTree = "<group>"; };
+		ED6A1C8C2AF274B7002A6686 /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED6A1C962AF274CE002A6686 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		ED6A1C992AF274FC002A6686 /* Localization.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Localization.xcconfig; sourceTree = "<group>"; };
+		ED6A1C9F2AF276BC002A6686 /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EDA13AE32AEA2D5700E1EDC0 /* Frameworks */ = {
+		ED6A1C892AF274B7002A6686 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,75 +29,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EDA13ADD2AEA2D5700E1EDC0 = {
+		ED6A1C822AF274B7002A6686 = {
 			isa = PBXGroup;
 			children = (
-				EDA13AF52AEA363C00E1EDC0 /* Configuration */,
-				EDA13AE72AEA2D5700E1EDC0 /* Products */,
-				EDA13AE82AEA2D5700E1EDC0 /* Sources */,
+				ED6A1C982AF274EA002A6686 /* Configuration */,
+				ED6A1C8D2AF274B7002A6686 /* Products */,
+				ED6A1C8E2AF274B7002A6686 /* Resources */,
+				ED6A1C9E2AF276AC002A6686 /* Sources */,
 			);
 			sourceTree = "<group>";
 		};
-		EDA13AE72AEA2D5700E1EDC0 /* Products */ = {
+		ED6A1C8D2AF274B7002A6686 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDA13AE62AEA2D5700E1EDC0 /* libEntities.a */,
+				ED6A1C8C2AF274B7002A6686 /* Localization.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EDA13AE82AEA2D5700E1EDC0 /* Sources */ = {
+		ED6A1C8E2AF274B7002A6686 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EDA13AE92AEA2D5700E1EDC0 /* Product.swift */,
+				ED6A1C962AF274CE002A6686 /* Localizable.xcstrings */,
 			);
-			path = Sources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		EDA13AF52AEA363C00E1EDC0 /* Configuration */ = {
+		ED6A1C982AF274EA002A6686 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				EDA13AF62AEA364E00E1EDC0 /* Entities.xcconfig */,
+				ED6A1C992AF274FC002A6686 /* Localization.xcconfig */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		ED6A1C9E2AF276AC002A6686 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				ED6A1C9F2AF276BC002A6686 /* LocalizedString.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		ED6A1C872AF274B7002A6686 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		EDA13AE52AEA2D5700E1EDC0 /* Entities */ = {
+		ED6A1C8B2AF274B7002A6686 /* Localization */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDA13AED2AEA2D5700E1EDC0 /* Build configuration list for PBXNativeTarget "Entities" */;
+			buildConfigurationList = ED6A1C932AF274B7002A6686 /* Build configuration list for PBXNativeTarget "Localization" */;
 			buildPhases = (
-				EDA13AE22AEA2D5700E1EDC0 /* Sources */,
-				EDA13AE32AEA2D5700E1EDC0 /* Frameworks */,
-				EDA13AE42AEA2D5700E1EDC0 /* CopyFiles */,
+				ED6A1C872AF274B7002A6686 /* Headers */,
+				ED6A1C882AF274B7002A6686 /* Sources */,
+				ED6A1C892AF274B7002A6686 /* Frameworks */,
+				ED6A1C8A2AF274B7002A6686 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Entities;
-			productName = Entities;
-			productReference = EDA13AE62AEA2D5700E1EDC0 /* libEntities.a */;
-			productType = "com.apple.product-type.library.static";
+			name = Localization;
+			productName = Localization;
+			productReference = ED6A1C8C2AF274B7002A6686 /* Localization.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EDA13ADE2AEA2D5700E1EDC0 /* Project object */ = {
+		ED6A1C832AF274B7002A6686 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					EDA13AE52AEA2D5700E1EDC0 = {
-						CreatedOnToolsVersion = 15.0;
+					ED6A1C8B2AF274B7002A6686 = {
+						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
-			buildConfigurationList = EDA13AE12AEA2D5700E1EDC0 /* Build configuration list for PBXProject "Entities" */;
+			buildConfigurationList = ED6A1C862AF274B7002A6686 /* Build configuration list for PBXProject "Localization" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,31 +125,42 @@
 				en,
 				Base,
 			);
-			mainGroup = EDA13ADD2AEA2D5700E1EDC0;
-			productRefGroup = EDA13AE72AEA2D5700E1EDC0 /* Products */;
+			mainGroup = ED6A1C822AF274B7002A6686;
+			productRefGroup = ED6A1C8D2AF274B7002A6686 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EDA13AE52AEA2D5700E1EDC0 /* Entities */,
+				ED6A1C8B2AF274B7002A6686 /* Localization */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		ED6A1C8A2AF274B7002A6686 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6A1C972AF274CE002A6686 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		EDA13AE22AEA2D5700E1EDC0 /* Sources */ = {
+		ED6A1C882AF274B7002A6686 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA13AEA2AEA2D5700E1EDC0 /* Product.swift in Sources */,
+				ED6A1CA02AF276BC002A6686 /* LocalizedString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EDA13AEB2AEA2D5700E1EDC0 /* Debug */ = {
+		ED6A1C912AF274B7002A6686 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDA13AF62AEA364E00E1EDC0 /* Entities.xcconfig */;
+			baseConfigurationReference = ED6A1C992AF274FC002A6686 /* Localization.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -173,7 +194,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -194,16 +214,16 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		EDA13AEC2AEA2D5700E1EDC0 /* Release */ = {
+		ED6A1C922AF274B7002A6686 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDA13AF62AEA364E00E1EDC0 /* Entities.xcconfig */;
+			baseConfigurationReference = ED6A1C992AF274FC002A6686 /* Localization.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -237,7 +257,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -252,52 +271,88 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		EDA13AEE2AEA2D5700E1EDC0 /* Debug */ = {
+		ED6A1C942AF274B7002A6686 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.damien-rivet.Localization";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		EDA13AEF2AEA2D5700E1EDC0 /* Release */ = {
+		ED6A1C952AF274B7002A6686 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.damien-rivet.Localization";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EDA13AE12AEA2D5700E1EDC0 /* Build configuration list for PBXProject "Entities" */ = {
+		ED6A1C862AF274B7002A6686 /* Build configuration list for PBXProject "Localization" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EDA13AEB2AEA2D5700E1EDC0 /* Debug */,
-				EDA13AEC2AEA2D5700E1EDC0 /* Release */,
+				ED6A1C912AF274B7002A6686 /* Debug */,
+				ED6A1C922AF274B7002A6686 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDA13AED2AEA2D5700E1EDC0 /* Build configuration list for PBXNativeTarget "Entities" */ = {
+		ED6A1C932AF274B7002A6686 /* Build configuration list for PBXNativeTarget "Localization" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EDA13AEE2AEA2D5700E1EDC0 /* Debug */,
-				EDA13AEF2AEA2D5700E1EDC0 /* Release */,
+				ED6A1C942AF274B7002A6686 /* Debug */,
+				ED6A1C952AF274B7002A6686 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EDA13ADE2AEA2D5700E1EDC0 /* Project object */;
+	rootObject = ED6A1C832AF274B7002A6686 /* Project object */;
 }

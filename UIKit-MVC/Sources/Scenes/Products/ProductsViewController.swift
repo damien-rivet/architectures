@@ -17,6 +17,7 @@
 
 import UIKit
 import Entities
+import Localization
 
 final class ProductsViewController: UIViewController {
 
@@ -40,11 +41,7 @@ final class ProductsViewController: UIViewController {
         setupLayout()
     }
 
-    // MARK: - Functions
-
     func setupViews() {
-        title = "Products"
-
         view.backgroundColor = .systemGroupedBackground
 
         tableView.backgroundColor = .clear

@@ -42,8 +42,8 @@
 			isa = PBXGroup;
 			children = (
 				ED6A1C802AF27095002A6686 /* Configuration */,
-				ED1CDC632A83D09600863A5A /* UIKit-MVVM */,
 				ED1CDC622A83D09600863A5A /* Products */,
+				ED1CDC632A83D09600863A5A /* Sources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,7 +55,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ED1CDC632A83D09600863A5A /* UIKit-MVVM */ = {
+		ED1CDC632A83D09600863A5A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				ED1CDC642A83D09600863A5A /* AppDelegate.swift */,
@@ -65,7 +65,7 @@
 				ED1CDC6D2A83D09700863A5A /* Assets.xcassets */,
 				ED1CDC6F2A83D09700863A5A /* LaunchScreen.storyboard */,
 			);
-			path = "UIKit-MVVM";
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		ED6A1C802AF27095002A6686 /* Configuration */ = {

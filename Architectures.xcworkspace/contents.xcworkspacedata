@@ -8,6 +8,9 @@
       location = "group:Entities/Entities.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Localization/Localization.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:UIKit-MVVM/UIKit-MVVM.xcodeproj">
    </FileRef>
    <FileRef

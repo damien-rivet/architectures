@@ -16,26 +16,25 @@
 //  
 
 import UIKit
+import Localization
 
 final class TabBarController: UITabBarController {
+
+    // MARK: - Functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
-
-        tabBar.isTranslucent = false
+        tabBar.isTranslucent = true
 
         let productsNavigationController = UINavigationController(rootViewController: ProductsViewController())
-        productsNavigationController.tabBarItem = UITabBarItem(title: "Products", image: .init(systemName: "basket"), tag: 0)
-
+        productsNavigationController.tabBarItem = UITabBarItem(title: LocalizedString.localizedString(for: "tabs.products"), image: .init(systemName: "basket"), tag: 0)
 
         let cartNavigationController = UINavigationController(rootViewController: CartViewController())
-        cartNavigationController.tabBarItem = UITabBarItem(title: "Cart", image: .init(systemName: "cart"), tag: 1)
-
+        cartNavigationController.tabBarItem = UITabBarItem(title: LocalizedString.localizedString(for: "tabs.cart"), image: .init(systemName: "cart"), tag: 1)
 
         let ordersNavigationController = UINavigationController(rootViewController: OrdersViewController())
-        ordersNavigationController.tabBarItem = UITabBarItem(title: "Orders", image: .init(systemName: "archivebox"), tag: 2)
+        ordersNavigationController.tabBarItem = UITabBarItem(title: LocalizedString.localizedString(for: "tabs.orders"), image: .init(systemName: "archivebox"), tag: 2)
 
         setViewControllers([productsNavigationController, cartNavigationController, ordersNavigationController], animated: false)
     }

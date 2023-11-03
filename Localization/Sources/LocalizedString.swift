@@ -13,27 +13,17 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see https://www.gnu.org/licenses.
-//  
+//
 
-import UIKit
-import Localization
+import Foundation
 
-final class OrdersViewController: UIViewController {
+/// Exposes the localized string catalog to the other Apps.
+public final class LocalizedString {
 
-    // MARK: - Functions
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupViews()
-        setupLayout()
-    }
-
-    func setupViews() {
-        view.backgroundColor = .systemGroupedBackground
-    }
-
-    func setupLayout() {
-
+    /// Returns a localized string for the supplied key.
+    /// - Parameter key: The key for the localized string to return.
+    /// - Returns: The localized string associated with the supplied key, otherwise it will return the key.
+    public static func localizedString(for key: String) -> String {
+        NSLocalizedString(key, bundle: Bundle(for: LocalizedString.self), comment: "")
     }
 }
