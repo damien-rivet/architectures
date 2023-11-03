@@ -8,11 +8,11 @@
 
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU General Public License for more details.
 
 // You should have received a copy of the GNU General Public License
-// along with this program.  If not, see https://www.gnu.org/licenses.
+// along with this program. If not, see https://www.gnu.org/licenses.
 //  
 
 import UIKit
@@ -23,6 +23,8 @@ final class ProductDetailsViewController: UIViewController {
     // MARK: - Properties
 
     private let product: Product
+
+    // MARK: - Initialisation
 
     init(product: Product) {
         self.product = product
@@ -44,9 +46,9 @@ final class ProductDetailsViewController: UIViewController {
     }
 
     func setupViews() {
-        view.backgroundColor = .systemGroupedBackground
-
         title = product.name
+
+        view.backgroundColor = .systemGroupedBackground
     }
 
     func setupLayout() {

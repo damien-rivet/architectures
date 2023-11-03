@@ -17,6 +17,8 @@
 		ED1CDC852A86304900863A5A /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDC842A86304900863A5A /* ProductDetailsViewController.swift */; };
 		ED6A1C7F2AF26F16002A6686 /* libEntities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6A1C7E2AF26F16002A6686 /* libEntities.a */; };
 		ED6A1C9B2AF275B8002A6686 /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6A1C9A2AF275B8002A6686 /* Localization.framework */; };
+		ED6A1CC62AF51FAA002A6686 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6A1CC52AF51FAA002A6686 /* Core.framework */; };
+		ED6A1CCA2AF52C66002A6686 /* ProductsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A1CC92AF52C66002A6686 /* ProductsTableViewDataSource.swift */; };
 		EDB95D852A8CF2DE0018EE65 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB95D842A8CF2DE0018EE65 /* OrdersViewController.swift */; };
 		EDB95D8A2A8CF7FF0018EE65 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB95D892A8CF7FF0018EE65 /* ProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,8 @@
 		ED1CDC842A86304900863A5A /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		ED6A1C7E2AF26F16002A6686 /* libEntities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libEntities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6A1C9A2AF275B8002A6686 /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED6A1CC52AF51FAA002A6686 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED6A1CC92AF52C66002A6686 /* ProductsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewDataSource.swift; sourceTree = "<group>"; };
 		EDA13AF12AEA2E0100E1EDC0 /* libEntities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libEntities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA13AF42AEA2F1500E1EDC0 /* UIKit-MVC.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "UIKit-MVC.xcconfig"; sourceTree = "<group>"; };
 		EDB95D842A8CF2DE0018EE65 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +50,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED6A1C7F2AF26F16002A6686 /* libEntities.a in Frameworks */,
+				ED6A1CC62AF51FAA002A6686 /* Core.framework in Frameworks */,
 				ED6A1C9B2AF275B8002A6686 /* Localization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +121,7 @@
 			children = (
 				ED1CDC7F2A86301B00863A5A /* Details */,
 				ED1CDC822A86303C00863A5A /* ProductsViewController.swift */,
+				ED6A1CC92AF52C66002A6686 /* ProductsTableViewDataSource.swift */,
 				EDB95D892A8CF7FF0018EE65 /* ProductTableViewCell.swift */,
 			);
 			path = Products;
@@ -132,6 +138,7 @@
 		EDA13AF02AEA2E0100E1EDC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED6A1CC52AF51FAA002A6686 /* Core.framework */,
 				ED6A1C9A2AF275B8002A6686 /* Localization.framework */,
 				ED6A1C7E2AF26F16002A6686 /* libEntities.a */,
 				EDA13AF12AEA2E0100E1EDC0 /* libEntities.a */,
@@ -231,6 +238,7 @@
 				ED1CDC7C2A862FF000863A5A /* TabBarController.swift in Sources */,
 				EDB95D852A8CF2DE0018EE65 /* OrdersViewController.swift in Sources */,
 				ED1CDC852A86304900863A5A /* ProductDetailsViewController.swift in Sources */,
+				ED6A1CCA2AF52C66002A6686 /* ProductsTableViewDataSource.swift in Sources */,
 				ED1CDC572A83D02400863A5A /* SceneDelegate.swift in Sources */,
 				ED1CDC832A86303C00863A5A /* ProductsViewController.swift in Sources */,
 			);
@@ -305,6 +313,7 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};

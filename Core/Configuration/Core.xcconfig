@@ -22,6 +22,6 @@
 
 // Packaging
 DEFINES_MODULE = YES
-PRODUCT_BUNDLE_IDENTIFIER = com.github.damien-rivet.Localization
-PRODUCT_MODULE_NAME = Localization
-PRODUCT_NAME = Localization
+PRODUCT_BUNDLE_IDENTIFIER = com.github.damien-rivet.Core
+PRODUCT_MODULE_NAME = Core
+PRODUCT_NAME = Core

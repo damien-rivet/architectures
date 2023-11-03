@@ -5,6 +5,9 @@
       location = "group:/Users/drivet/Developer/Workspace/git/Open-Source/architectures/Configuration">
    </FileRef>
    <FileRef
+      location = "group:Core/Core.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Entities/Entities.xcodeproj">
    </FileRef>
    <FileRef

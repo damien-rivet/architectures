@@ -15,13 +15,29 @@
 // along with this program. If not, see https://www.gnu.org/licenses.
 //
 
-// Configuration settings file format documentation can be found at:
-// https://help.apple.com/xcode/#/dev745c5c974
+import Foundation
 
-#include "../Configuration/Common.xcconfig"
+public struct Product {
 
-// Packaging
-DEFINES_MODULE = YES
-PRODUCT_BUNDLE_IDENTIFIER = com.github.damien-rivet.Localization
-PRODUCT_MODULE_NAME = Localization
-PRODUCT_NAME = Localization
+    // MARK: - Constants
+
+    public let identifier: UUID
+    public let name: String
+    public let shortDescription: String
+    public let fullDescription: String
+
+    // MARK: - Initialisation
+
+    public init(identifier: UUID, name: String, shortDescription: String, fullDescription: String) {
+        self.identifier = identifier
+        self.name = name
+        self.shortDescription = shortDescription
+        self.fullDescription = fullDescription
+    }
+}
+
+// MARK: - Hashable
+
+extension Product: Hashable {
+
+}

@@ -15,13 +15,27 @@
 // along with this program. If not, see https://www.gnu.org/licenses.
 //
 
-// Configuration settings file format documentation can be found at:
-// https://help.apple.com/xcode/#/dev745c5c974
+import Foundation
 
-#include "../Configuration/Common.xcconfig"
+public final class Cart {
 
-// Packaging
-DEFINES_MODULE = YES
-PRODUCT_BUNDLE_IDENTIFIER = com.github.damien-rivet.Localization
-PRODUCT_MODULE_NAME = Localization
-PRODUCT_NAME = Localization
+    // MARK: - Properties
+
+    public private (set) var lines: [CartLine]
+
+    // MARK: - Initialisation
+
+    public init() {
+        lines = []
+    }
+
+    // MARK: - Functions
+
+    public func add(product: Product) {
+        print("Not yet implemented")
+    }
+
+    public func remove(product: Product) {
+        print("Not yet implemented")
+    }
+}

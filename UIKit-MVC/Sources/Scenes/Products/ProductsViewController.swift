@@ -8,16 +8,15 @@
 
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU General Public License for more details.
 
 // You should have received a copy of the GNU General Public License
-// along with this program.  If not, see https://www.gnu.org/licenses.
+// along with this program. If not, see https://www.gnu.org/licenses.
 //  
 
 import UIKit
 import Entities
-import Localization
 
 final class ProductsViewController: UIViewController {
 
@@ -32,6 +31,13 @@ final class ProductsViewController: UIViewController {
 
     private let tableView = UITableView(frame: CGRect.zero, style: .plain)
 
+    private lazy var dataSource: ProductsTableViewDataSource = {
+        let dataSource = ProductsTableViewDataSource(tableView: tableView)
+        dataSource.delegate = self
+
+        return dataSource
+    }()
+
     // MARK: - Functions
 
     override func viewDidLoad() {
@@ -39,15 +45,18 @@ final class ProductsViewController: UIViewController {
 
         setupViews()
         setupLayout()
+
+        dataSource.update(with: products)
     }
 
     func setupViews() {
         view.backgroundColor = .systemGroupedBackground
 
         tableView.backgroundColor = .clear
-        tableView.dataSource = self
+        tableView.dataSource = dataSource.makeDataSource()
         tableView.delegate = self
         tableView.register(ProductTableViewCell.self, forCellReuseIdentifier: ProductTableViewCell.reuseIdentifier)
+        tableView.separatorStyle = .none
 
         view.addSubview(tableView)
     }
@@ -64,27 +73,6 @@ final class ProductsViewController: UIViewController {
     }
 }
 
-// MARK: - UITableViewDataSource
-
-extension ProductsViewController: UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        products.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.reuseIdentifier, for: indexPath) as? ProductTableViewCell else {
-            fatalError("TEST")
-        }
-
-        let product = products[indexPath.row]
-
-        cell.configure(for: product)
-
-        return cell
-    }
-}
-
 // MARK: - UITableViewDelegate
 
 extension ProductsViewController: UITableViewDelegate {
@@ -97,5 +85,14 @@ extension ProductsViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         64
+    }
+}
+
+// MARK: - ProductsTableViewDataSourceDelegate
+
+extension ProductsViewController: ProductsTableViewDataSourceDelegate {
+
+    func didTapAddButton(for productIdentifier: UUID) {
+        print("Did tap button for product with ID === \(productIdentifier)")
     }
 }

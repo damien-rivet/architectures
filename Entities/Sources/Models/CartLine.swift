@@ -15,13 +15,19 @@
 // along with this program. If not, see https://www.gnu.org/licenses.
 //
 
-// Configuration settings file format documentation can be found at:
-// https://help.apple.com/xcode/#/dev745c5c974
+import Foundation
 
-#include "../Configuration/Common.xcconfig"
+public final class CartLine {
 
-// Packaging
-DEFINES_MODULE = YES
-PRODUCT_BUNDLE_IDENTIFIER = com.github.damien-rivet.Localization
-PRODUCT_MODULE_NAME = Localization
-PRODUCT_NAME = Localization
+    // MARK: - Properties
+
+    public let product: Product
+    public private (set) var quantity: Int
+
+    // MARK: - Initialisation
+
+    public init(product: Product, quantity: Int = 1) {
+        self.product = product
+        self.quantity = quantity
+    }
+}

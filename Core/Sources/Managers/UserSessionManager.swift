@@ -15,13 +15,22 @@
 // along with this program. If not, see https://www.gnu.org/licenses.
 //
 
-// Configuration settings file format documentation can be found at:
-// https://help.apple.com/xcode/#/dev745c5c974
+import Foundation
+import Entities
 
-#include "../Configuration/Common.xcconfig"
+public final class UserSessionManager {
+    
+    // MARK: - Constants
 
-// Packaging
-DEFINES_MODULE = YES
-PRODUCT_BUNDLE_IDENTIFIER = com.github.damien-rivet.Localization
-PRODUCT_MODULE_NAME = Localization
-PRODUCT_NAME = Localization
+    public static let shared = UserSessionManager()
+
+    // MARK: - Properties
+
+    public let userSession: UserSession
+
+    // MARK: - Initialisation
+
+    private init() {
+        userSession = UserSession()
+    }
+}
