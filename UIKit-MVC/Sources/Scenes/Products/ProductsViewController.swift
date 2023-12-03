@@ -16,7 +16,9 @@
 //  
 
 import UIKit
+import Core
 import Entities
+import Localization
 
 final class ProductsViewController: UIViewController {
 
@@ -50,6 +52,8 @@ final class ProductsViewController: UIViewController {
     }
 
     func setupViews() {
+        title = LocalizedString.localizedString(for: "products.title", value: "\(products.count)")
+
         view.backgroundColor = .systemGroupedBackground
 
         tableView.backgroundColor = .clear
@@ -93,6 +97,26 @@ extension ProductsViewController: UITableViewDelegate {
 extension ProductsViewController: ProductsTableViewDataSourceDelegate {
 
     func didTapAddButton(for productIdentifier: UUID) {
-        print("Did tap button for product with ID === \(productIdentifier)")
+        guard let tappedProduct = products.first(where: { $0.identifier == productIdentifier }) else {
+            return
+        }
+
+        UserSessionManager.shared.userSession.cart.add(product: tappedProduct)
+
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+
+    func didTapRemoveButton(for productIdentifier: UUID) {
+        guard let tappedProduct = products.first(where: { $0.identifier == productIdentifier }) else {
+            return
+        }
+
+        UserSessionManager.shared.userSession.cart.remove(product: tappedProduct)
+
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }

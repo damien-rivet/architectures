@@ -16,6 +16,7 @@
 //
 
 import UIKit
+import Core
 import Localization
 
 final class CartViewController: UIViewController {
@@ -27,6 +28,12 @@ final class CartViewController: UIViewController {
 
         setupViews()
         setupLayout()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        dump(UserSessionManager.shared.userSession.cart)
     }
 
     func setupViews() {

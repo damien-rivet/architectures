@@ -16,11 +16,13 @@
 //
 
 import UIKit
+import Core
 import Entities
 
 protocol ProductsTableViewDataSourceDelegate: AnyObject {
 
     func didTapAddButton(for productIdentifier: UUID)
+    func didTapRemoveButton(for productIdentifier: UUID)
 }
 
 final class ProductsTableViewDataSource {
@@ -51,7 +53,7 @@ final class ProductsTableViewDataSource {
         let dataSource = UITableViewDiffableDataSource<ProductTableViewSection, Product>(tableView: tableView) { tableView, indexPath, product in
             let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.reuseIdentifier, for: indexPath) as? ProductTableViewCell
 
-            cell?.configure(for: product)
+            cell?.configure(for: product, quantity: UserSessionManager.shared.userSession.cart.count(of: product))
             cell?.delegate = self
 
             return cell
@@ -77,5 +79,9 @@ extension ProductsTableViewDataSource: ProductTableViewCellDelegate {
 
     func didTapAddButton(for productIdentifier: UUID) {
         delegate?.didTapAddButton(for: productIdentifier)
+    }
+
+    func didTapRemoveButton(for productIdentifier: UUID) {
+        delegate?.didTapRemoveButton(for: productIdentifier)
     }
 }

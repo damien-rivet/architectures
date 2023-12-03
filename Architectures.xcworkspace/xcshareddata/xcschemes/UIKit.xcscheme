@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ED1CDC602A83D09600863A5A"
-               BuildableName = "UIKit-MVVM.app"
+               BuildableName = "UIKit MVVM.app"
                BlueprintName = "UIKit-MVVM"
                ReferencedContainer = "container:UIKit-MVVM/UIKit-MVVM.xcodeproj">
             </BuildableReference>

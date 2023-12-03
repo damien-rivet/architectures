@@ -23,7 +23,7 @@ public final class LocalizedString {
     /// Returns a localized string for the supplied key.
     /// - Parameter key: The key for the localized string to return.
     /// - Returns: The localized string associated with the supplied key, otherwise it will return the key.
-    public static func localizedString(for key: String) -> String {
-        NSLocalizedString(key, bundle: Bundle(for: LocalizedString.self), comment: "")
+    public static func localizedString(for key: String, value: String = "") -> String {
+        NSLocalizedString(key, bundle: Bundle(for: LocalizedString.self), value: value, comment: "")
     }
 }

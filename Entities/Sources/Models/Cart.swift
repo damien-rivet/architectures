@@ -32,10 +32,34 @@ public final class Cart {
     // MARK: - Functions
 
     public func add(product: Product) {
-        print("Not yet implemented")
+        if let existingLine = lines.first(where: { $0.product.identifier == product.identifier }) {
+            existingLine.increase()
+        } else {
+            lines.append(CartLine(product: product))
+        }
     }
 
     public func remove(product: Product) {
-        print("Not yet implemented")
+        if let existingLine = lines.first(where: { $0.product.identifier == product.identifier }) {
+            if existingLine.quantity > 1 {
+                existingLine.decrease()
+            } else {
+                clear(product: product)
+            }
+        }
+    }
+
+    public func clear(product: Product) {
+        if let indexOfExistingLine = lines.firstIndex(where: { $0.product.identifier == product.identifier }) {
+            lines.remove(at: indexOfExistingLine)
+        }
+    }
+
+    public func count(of product: Product) -> Int? {
+        guard let existingLine = lines.first(where: { $0.product.identifier == product.identifier }) else {
+            return nil
+        }
+
+        return existingLine.quantity
     }
 }

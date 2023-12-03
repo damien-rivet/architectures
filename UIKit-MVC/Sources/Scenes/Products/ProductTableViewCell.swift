@@ -23,6 +23,7 @@ protocol ProductTableViewCellDelegate: AnyObject {
     // MARK: - Functions
 
     func didTapAddButton(for productIdentifier: UUID)
+    func didTapRemoveButton(for productIdentifier: UUID)
 }
 
 final class ProductTableViewCell: UITableViewCell {
@@ -36,6 +37,22 @@ final class ProductTableViewCell: UITableViewCell {
     private var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
+
+        return label
+    }()
+
+    private var removeButton: UIButton = {
+        let button = UIButton(configuration: .plain())
+        button.setImage(UIImage(systemName: "cart.badge.minus"), for: .normal)
+        button.tintColor = .systemRed
+
+        return button
+    }()
+
+    private var quantityLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.preferredFont(forTextStyle: .body)
+        label.textColor = .secondaryLabel
 
         return label
     }()
@@ -73,27 +90,56 @@ final class ProductTableViewCell: UITableViewCell {
             }
         }), for: .touchUpInside)
 
+        contentView.addSubview(removeButton)
+
+        removeButton.addAction(UIAction(handler: { [unowned self] _ in
+            if let productIdentifier {
+                delegate?.didTapRemoveButton(for: productIdentifier)
+            }
+        }), for: .touchUpInside)
+
+        contentView.addSubview(quantityLabel)
+
         contentView.addSubview(addButton)
     }
 
     private func setupLayout() {
-        [nameLabel, addButton].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+        [nameLabel, removeButton, quantityLabel, addButton].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
 
         NSLayoutConstraint.activate([
             nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            nameLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 8),
+            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             nameLabel.heightAnchor.constraint(equalToConstant: 21),
             nameLabel.widthAnchor.constraint(equalToConstant: 128),
 
+            removeButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            removeButton.trailingAnchor.constraint(equalTo: quantityLabel.leadingAnchor, constant: -8),
+            removeButton.heightAnchor.constraint(equalToConstant: 32),
+            removeButton.widthAnchor.constraint(equalToConstant: 32),
+
+            quantityLabel.centerYAnchor.constraint(equalTo: nameLabel.centerYAnchor),
+            quantityLabel.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: 8),
+            quantityLabel.heightAnchor.constraint(equalToConstant: 32),
+            quantityLabel.widthAnchor.constraint(equalToConstant: 32),
+
             addButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            addButton.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -8),
+            addButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             addButton.heightAnchor.constraint(equalToConstant: 32),
             addButton.widthAnchor.constraint(equalToConstant: 32),
         ])
     }
 
-    func configure(for product: Product) {
+    func configure(for product: Product, quantity: Int? = 0) {
         productIdentifier = product.identifier
         nameLabel.text = product.name
+
+
+        if let quantity {
+            quantityLabel.text = "\(quantity)"
+            removeButton.isHidden = false
+        } else {
+            quantityLabel.text = "0"
+            removeButton.isHidden = true
+        }
     }
 }

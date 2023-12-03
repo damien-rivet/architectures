@@ -30,4 +30,14 @@ public final class CartLine {
         self.product = product
         self.quantity = quantity
     }
+
+    // MARK: - Functions
+
+    public func increase(by quantity: Int = 1) {
+        self.quantity += quantity
+    }
+
+    public func decrease(by quantity: Int = 1) {
+        self.quantity -= quantity
+    }
 }
