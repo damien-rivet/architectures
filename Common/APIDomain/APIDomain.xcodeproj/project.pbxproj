@@ -6,35 +6,44 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXCopyFilesBuildPhase section */
-		3F9D3A5E2CDC974500F3A61C /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		3F9D3A602CDC974500F3A61C /* libAPIDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAPIDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F9D3A6B2CDC97CD00F3A61C /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
-		3F9D3A6C2CDC97D500F3A61C /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		3F9D3A6D2CDC97DC00F3A61C /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		3F22DDFB2CDCC11200484321 /* APIDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3F22DE092CDCC1AF00484321 /* Exceptions for "Sources" folder in "APIDomain" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/InventoryEntry.swift,
+				Models/Product.swift,
+				Models/ProductFamily.swift,
+				Repositories/Products/ProductRepository.swift,
+				Repositories/Products/ProductRepositoryError.swift,
+				Services/Products/ProductService.swift,
+				Services/Products/ProductServiceError.swift,
+			);
+			target = 3F22DDFA2CDCC11200484321 /* APIDomain */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3F9D3A622CDC974500F3A61C /* Sources */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3F22DE092CDCC1AF00484321 /* Exceptions for "Sources" folder in "APIDomain" target */,
+			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		3FDE7C1B2CDD1E100046B5DA /* Configurations */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3F9D3A5D2CDC974500F3A61C /* Frameworks */ = {
+		3F22DDF82CDCC11200484321 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,7 +56,7 @@
 		3F9D3A572CDC974500F3A61C = {
 			isa = PBXGroup;
 			children = (
-				3F9D3A6A2CDC97BA00F3A61C /* Configurations */,
+				3FDE7C1B2CDD1E100046B5DA /* Configurations */,
 				3F9D3A612CDC974500F3A61C /* Products */,
 				3F9D3A622CDC974500F3A61C /* Sources */,
 			);
@@ -56,45 +65,43 @@
 		3F9D3A612CDC974500F3A61C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F9D3A602CDC974500F3A61C /* libAPIDomain.a */,
+				3F22DDFB2CDCC11200484321 /* APIDomain.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3F9D3A6A2CDC97BA00F3A61C /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				3F9D3A6B2CDC97CD00F3A61C /* Shared.xcconfig */,
-				3F9D3A6C2CDC97D500F3A61C /* Debug.xcconfig */,
-				3F9D3A6D2CDC97DC00F3A61C /* Release.xcconfig */,
-			);
-			path = Configurations;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		3F22DDF62CDCC11200484321 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		3F9D3A5F2CDC974500F3A61C /* APIDomain */ = {
+		3F22DDFA2CDCC11200484321 /* APIDomain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F9D3A672CDC974500F3A61C /* Build configuration list for PBXNativeTarget "APIDomain" */;
+			buildConfigurationList = 3F22DE002CDCC11200484321 /* Build configuration list for PBXNativeTarget "APIDomain" */;
 			buildPhases = (
-				3F9D3A5C2CDC974500F3A61C /* Sources */,
-				3F9D3A5D2CDC974500F3A61C /* Frameworks */,
-				3F9D3A5E2CDC974500F3A61C /* CopyFiles */,
+				3F22DDF62CDCC11200484321 /* Headers */,
+				3F22DDF72CDCC11200484321 /* Sources */,
+				3F22DDF82CDCC11200484321 /* Frameworks */,
+				3F22DDF92CDCC11200484321 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				3F9D3A622CDC974500F3A61C /* Sources */,
-			);
 			name = APIDomain;
 			packageProductDependencies = (
 			);
 			productName = APIDomain;
-			productReference = 3F9D3A602CDC974500F3A61C /* libAPIDomain.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 3F22DDFB2CDCC11200484321 /* APIDomain.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -106,7 +113,7 @@
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					3F9D3A5F2CDC974500F3A61C = {
+					3F22DDFA2CDCC11200484321 = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
@@ -125,13 +132,23 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F9D3A5F2CDC974500F3A61C /* APIDomain */,
+				3F22DDFA2CDCC11200484321 /* APIDomain */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		3F22DDF92CDCC11200484321 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		3F9D3A5C2CDC974500F3A61C /* Sources */ = {
+		3F22DDF72CDCC11200484321 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -141,9 +158,60 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		3F22DE012CDCC11200484321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3F22DE022CDCC11200484321 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		3F9D3A652CDC974500F3A61C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F9D3A6C2CDC97D500F3A61C /* Debug.xcconfig */;
+			baseConfigurationReferenceAnchor = 3FDE7C1B2CDD1E100046B5DA /* Configurations */;
+			baseConfigurationReferenceRelativePath = Debug.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -204,7 +272,8 @@
 		};
 		3F9D3A662CDC974500F3A61C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F9D3A6D2CDC97DC00F3A61C /* Release.xcconfig */;
+			baseConfigurationReferenceAnchor = 3FDE7C1B2CDD1E100046B5DA /* Configurations */;
+			baseConfigurationReferenceRelativePath = Release.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -256,37 +325,23 @@
 			};
 			name = Release;
 		};
-		3F9D3A682CDC974500F3A61C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		3F9D3A692CDC974500F3A61C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3F22DE002CDCC11200484321 /* Build configuration list for PBXNativeTarget "APIDomain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F22DE012CDCC11200484321 /* Debug */,
+				3F22DE022CDCC11200484321 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3F9D3A5B2CDC974500F3A61C /* Build configuration list for PBXProject "APIDomain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F9D3A652CDC974500F3A61C /* Debug */,
 				3F9D3A662CDC974500F3A61C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3F9D3A672CDC974500F3A61C /* Build configuration list for PBXNativeTarget "APIDomain" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F9D3A682CDC974500F3A61C /* Debug */,
-				3F9D3A692CDC974500F3A61C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

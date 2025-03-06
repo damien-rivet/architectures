@@ -8,7 +8,21 @@
          location = "group:Common.xcconfig">
       </FileRef>
    </Group>
-   <FileRef
-      location = "group:APIDomain/APIDomain.xcodeproj">
-   </FileRef>
+   <Group
+      location = "group:SwiftUI"
+      name = "SwiftUI">
+      <FileRef
+         location = "group:API-SwiftUI-MVC/API-SwiftUI-MVC.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Common"
+      name = "Common">
+      <FileRef
+         location = "group:APIData/APIData.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:APIDomain/APIDomain.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

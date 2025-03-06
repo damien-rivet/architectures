@@ -1,5 +1,0 @@
-#include "../../Configurations/Common.xcconfig"
-
-// Packaging
-PRODUCT_MODULE_NAME=APIDomain
-PRODUCT_NAME=APIDomain

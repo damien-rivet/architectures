@@ -1,0 +1,4 @@
+#include "./Shared.xcconfig"
+
+// Packaging
+PRODUCT_BUNDLE_IDENTIFIER=app.getapi.APIDomain.debug

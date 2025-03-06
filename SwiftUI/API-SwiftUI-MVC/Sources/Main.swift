@@ -13,19 +13,16 @@
 // along with this program.  If not, see https://www.gnu.org/licenses.
 //
 
-import Foundation
+import SwiftUI
 
-public struct Dummy {
+@main
+struct Main: App {
 
-    // MARK: - Constants
-
-    public let firstName: String
-    public let lastName: String
-
-    // MARK: - Initialization
-
-    public init(firstName: String, lastName: String) {
-        self.firstName = firstName
-        self.lastName = lastName
+    // MARK: - View
+    
+    var body: some Scene {
+        WindowGroup {
+            MainView()
+        }
     }
 }

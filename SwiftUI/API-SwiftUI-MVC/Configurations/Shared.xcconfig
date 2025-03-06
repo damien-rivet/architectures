@@ -1,0 +1,8 @@
+#include "../../Configurations/Common.xcconfig"
+
+// Packaging
+DEFINES_MODULE=NO
+PRODUCT_NAME=API-SwiftUI-MVC
+
+// Versioning
+MARKETING_VERSION=0.0.1
